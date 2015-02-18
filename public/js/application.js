@@ -1,10 +1,9 @@
 $(document).ready(function() {
   $('.click-vote').click(function(event){
     event.preventDefault();
-    console.log("wuuhhuu");
     $.ajax({
       type: "post",
-      url: "FIND IT",
+      url: "/testing",
       success: function(success) {
         console.log(success)
       }
