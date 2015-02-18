@@ -1,14 +1,28 @@
 $(document).ready(function() {
-  $(".post").click(function(event) {
+  $(".excuse").click(function(event) {
       event.preventDefault();
-       var postid = $('.getpost').val();
+       var excuseID = $('.find-excuse').val();
       $.ajax({
         type: "post",
-        url: "/vote/excuse/" + postid,
+        url: "/vote/excuse/" + excuseID,
         success: function(success) {
            $('.vote_count').html(success.count)
         }
       });
     }
   );
+
+
+  $(".ajax_comment").click(function(event) {
+    event.preventDefault();
+    $.ajax({
+      type: "post",
+      url: "/test",
+      data: $(this).serialize(),
+      success: function(success) {
+        console.log("alright alright")
+      }
+    });
+  });
+
 });
