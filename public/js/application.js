@@ -32,6 +32,7 @@ $(document).ready(function() {
       url: "/ajax/comment/excuse/" + rightID,
       success: function(success) {
         $('.all-comments').prepend("<p>"+ success.comment.content + " by: " + success.name + "</p>");
+        $(".hello").val(" ");
       }
     });
   });
