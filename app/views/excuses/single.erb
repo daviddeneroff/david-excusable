@@ -1,1 +1,6 @@
-gotta get to this
+Votes: <%= @excuse.votes.count %><br>
+  <%= @excuse.title %><br>
+  <%= @excuse.content %><br>
+  <% @excuse.comments.each do |comment| %>
+    <%= comment.content %> by: <%= comment.user.username %>
+  <% end %>
