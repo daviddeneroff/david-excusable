@@ -65,3 +65,10 @@ code {
     margin-left: -1em;
     overflow: auto;
 }
+
+
+nav {
+    background-color: #ADD8E6;
+    text-align: right;
+    padding-right: 10px;
+}
