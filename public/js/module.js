@@ -19,13 +19,13 @@
 // }
 
 var curseChecker = (function() {
-  console.log("hi");
   var curseEval = function(input) {
+  var arr = ["booger", "ugly", "stupid"]
     if(input == "hi") {
       console.log("sup");
       return true;
     } else {
-      console.log("free to fly");
+      return false;
     }
   }
   return {

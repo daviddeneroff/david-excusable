@@ -16,7 +16,6 @@ $(document).ready(function() {
         url: "/vote/excuse/" + excuseID,
         success: function(success) {
            $('.vote_count').html(success.count);
-           curseChecker().look("hd");
         }
       });
     }
