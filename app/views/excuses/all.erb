@@ -1,4 +1,7 @@
 <% @excuses.each do |excuse|%>
   <%= excuse.title %> | <%= excuse.user.username %>__Votes: <%= excuse.votes.count %><br>
   <%= excuse.content %><br>
+  <% excuse.comments.each do |comment| %>
+    <%= comment.user.username %> says:<%= comment.content %><br>
+    <% end %>
 <% end %>
