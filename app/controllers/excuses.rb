@@ -18,7 +18,10 @@ get '/excuses/:id' do
 end
 
 put '/excuses/:id' do
-  "sup bro"
+  p params[:excuse]
+  @excuse = Excuse.find(params[:id])
+  @excuse.update_attributes(title: params[:excuse][:title], content: params[:excuse][:content])
+  redirect '/excuses'
 end
 
 get '/excuses/:id/edit' do

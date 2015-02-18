@@ -1,6 +1,7 @@
 <br>
 <div>
-<form class="new-excuse" action="CHANGE" method="whaaaaaaaaa">
+<form action="/excuses/<%= @excuse.id %>" method="POST">
+  <input type="hidden" name="_method" value="put">
   Title: <input type="text" name="excuse[title]" value="<%= @excuse.title %>"><br>
   Content: <br>
   <textarea name="excuse[content]" cols="30" rows="3"><%= @excuse.content %></textarea>
