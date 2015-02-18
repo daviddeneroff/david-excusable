@@ -123,3 +123,13 @@ table.home-page {
 #excuses-header {
     text-align:center;
 }
+
+.single-btn {
+    text-align:center;
+}
+
+.fix-excuses {
+     margin:auto;
+    text-align:center;
+    display:block;
+}

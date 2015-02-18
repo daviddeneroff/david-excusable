@@ -30,9 +30,10 @@ get '/excuses/:id/edit' do
 end
 
 delete "/excuses/:id/delete" do
-  @excuse = Excuse.find(params[:id])
-  @excuse.votes.each {|vote| vote.destroy}
-  @excuse.comments.each {|comment| comment.destroy}
-  @excuse.destroy
+  # @excuse = Excuse.find(params[:id])
+  # @excuse.votes.each {|vote| vote.destroy}
+  # @excuse.comments.each {|comment| comment.destroy}
+  # @excuse.destroy
+  p "got em"
   redirect '/excuses'
 end
