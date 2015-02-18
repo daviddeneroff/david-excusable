@@ -17,6 +17,15 @@ get '/excuses/:id' do
   erb :'excuses/single'
 end
 
+put '/excuses/:id' do
+  "sup bro"
+end
+
+get '/excuses/:id/edit' do
+  @excuse = Excuse.find(params[:id])
+  erb :'excuses/edit'
+end
+
 delete "/excuses/:id/delete" do
   @excuse = Excuse.find(params[:id])
   @excuse.votes.each {|vote| vote.destroy}

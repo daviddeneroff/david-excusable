@@ -2,10 +2,12 @@
   <%= excuse.title %> | <%= excuse.user.username %>__Votes: <%= excuse.votes.count %><br>
   <%= excuse.content %><br>
   <% if current_user.id == excuse.user_id %>
+    <a href="/excuses/<%=excuse.id%>/edit">Update Excuse</a><br>
     <form action="/excuses/<%=excuse.id%>/delete" method= "POST">
       <input type="hidden" name="_method" value="Delete">
       <input type="submit" value="Delete Excuse">
     </form>
+
   <% end %>
   <% excuse.comments.each do |comment| %>
     <%= comment.user.username %> says:<%= comment.content %><br>
