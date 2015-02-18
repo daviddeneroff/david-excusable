@@ -71,4 +71,11 @@ nav {
     background-color: #ADD8E6;
     text-align: right;
     padding-right: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+body {
+    background-color: #FAEBD7;
 }
