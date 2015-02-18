@@ -9,3 +9,7 @@ Excuse.create(title: "hey man", content: "sup bru", user_id: 3)
 Comment.create(content: "nice one man", user_id: 1, excuse_id: 2)
 Comment.create(content: "no way", user_id: 2, excuse_id: 3)
 Comment.create(content: "that counts", user_id: 3, excuse_id: 1)
+
+Vote.create(excuse_id: 1, user_id: 3)
+Vote.create(excuse_id: 2, user_id: 1)
+Vote.create(excuse_id: 3, user_id: 2)
