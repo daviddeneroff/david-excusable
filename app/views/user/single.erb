@@ -1,1 +1,11 @@
-hey guys
+<h1>Welcome back <%= @user.username %></h1>
+
+<h3>Here are all of your excuses. Check out the comments and votes to see what people think!!</h3>
+<% @user.excuses.each do |excuse| %>
+Votes: <%= excuse.votes.count %><br>
+  <%= excuse.title %><br>
+  <%= excuse.content %><br>
+  <% excuse.comments.each do |comment| %>
+    <%= comment.content %> by: <%= comment.user.username %>
+  <% end %>
+<% end %>
