@@ -1,12 +1,14 @@
 $(document).ready(function() {
-  $('.click-vote').click(function(event){
-    event.preventDefault();
-    $.ajax({
-      type: "post",
-      url: "/testing",
-      success: function(success) {
-        console.log(success)
-      }
-    });
-  });
+  $(".post").click(function(event) {
+      event.preventDefault();
+       var postid = $('.getpost').val();
+      $.ajax({
+        type: "post",
+        url: "/vote/excuse/" + postid,
+        success: function(success) {
+           $('.vote_count').html(success.count)
+        }
+      });
+    }
+  );
 });

@@ -5,8 +5,8 @@
 <h2>Check out your cohortmate's excuses below...</h2>
 
 <% @excuses.each do |excuse|%>
-  <%= excuse.title %> | <%= excuse.user.username %><br>
-  <a href="#" class="click-vote">Vote</a> | Current Count: <span id="votes"><%= excuse.votes.count %><br></span>
+  <a href="/excuses/<%=excuse.id%>"><%= excuse.title %> | <%= excuse.user.username %></a><br>
+  Vote Count:<span class="vote_count"><%=excuse.votes.count%></span><br>
 
   <%= excuse.content %><br>
   <% if current_user.id == excuse.user_id %>

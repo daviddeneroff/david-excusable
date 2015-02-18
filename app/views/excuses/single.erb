@@ -1,4 +1,8 @@
 Votes: <%= @excuse.votes.count %><br>
+
+<a class="post" href="#">Vote</a> | Count:<span class="vote_count"><%=@excuse.votes.count%></span>
+<input class="getpost" name="postid" value="<%=@excuse.id%>" type="hidden">
+
   <%= @excuse.title %><br>
   <%= @excuse.content %><br>
   <% @excuse.comments.each do |comment| %>
