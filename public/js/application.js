@@ -31,6 +31,7 @@ $(document).ready(function() {
       data: $(this).serialize(),
       url: "/ajax/comment/excuse/" + rightID,
       success: function(success) {
+        curseChecker.look("booger");
         $('.all-comments').prepend("<p>"+ success.comment.content + " by: " + success.name + "</p>");
         $(".hello").val(" ");
       }
