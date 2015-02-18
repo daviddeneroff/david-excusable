@@ -11,6 +11,12 @@
   <% end %>
   <% excuse.comments.each do |comment| %>
     <%= comment.user.username %> says:<%= comment.content %><br>
+    <% if current_user.id == comment.user_id %>
+        <form action="/comments/<%=comment.id%>/delete" method= "POST">
+          <input type="hidden" name="_method" value="Delete">
+          <input type="submit" value="Delete Comment">
+        </form>
+      <% end %>
     <% end %>
 <% end %>
 
