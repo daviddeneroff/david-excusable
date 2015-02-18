@@ -31,7 +31,7 @@ $(document).ready(function() {
       data: $(this).serialize(),
       url: "/ajax/comment/excuse/" + rightID,
       success: function(success) {
-        $('.all-comments').append("<p>"+ success.comment.content + " by: " + success.name + "</p>");
+        $('.all-comments').prepend("<p>"+ success.comment.content + " by: " + success.name + "</p>");
       }
     });
   });
