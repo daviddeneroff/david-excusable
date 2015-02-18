@@ -1,4 +1,14 @@
+<br>
+<br>
 <h1>Welcome back <%= @user.username %></h1>
+
+
+    <a class="fix-excuses" href="/users/<%= @user.id %>/edit">Update Your Account</a>
+    <form class="single-btn" action="/users/<%= @user.id %>/delete" method="POST">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete Account">
+    </form>
+
 
 <h3 class="excuses-header">Here are all of your excuses. Check out the comments and votes to see what people think!!</h3>
 <% @user.excuses.each do |excuse| %>
