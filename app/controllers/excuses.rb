@@ -16,3 +16,11 @@ get '/excuses/:id' do
   @excuse = Excuse.find(params[:id])
   erb :'excuses/single'
 end
+
+delete "/excuses/:id/delete" do
+  @excuse = Excuse.find(params[:id])
+  @excuse.votes.each {|vote| vote.destroy}
+  @excuse.comments.each {|comment| comment.destroy}
+  @excuse.destroy
+  redirect '/excuses'
+end
