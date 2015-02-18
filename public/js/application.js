@@ -1,4 +1,13 @@
 $(document).ready(function() {
+
+  $('#signup').click(function() {
+    $('.signup').toggle();
+  });
+
+  $('#login').click(function() {
+    $('.login').toggle();
+  });
+
   $(".excuse").click(function(event) {
       event.preventDefault();
        var excuseID = $('.find-excuse').val();
@@ -13,14 +22,16 @@ $(document).ready(function() {
   );
 
 
-  $(".ajax_comment").click(function(event) {
+  $(".ajax_comment").submit(function(event) {
     event.preventDefault();
+    var rightID = $(".find-id").val();
     $.ajax({
       type: "post",
-      url: "/test",
+      dataType: "json",
       data: $(this).serialize(),
+      url: "/ajax/comment/excuse/" + rightID,
       success: function(success) {
-        console.log("alright alright")
+        $('.all-comments').append("<p>"+ success.comment.content + " by: " + success.name + "</p>");
       }
     });
   });

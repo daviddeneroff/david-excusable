@@ -2,8 +2,11 @@
 
 <h1>Welcome to Excusable!! Login or Signup Below</h1>
 
-
-<div>
+<table class="home-page">
+  <tr>
+    <td>
+<div id="sign">
+  <p id="signup">Sign up Here</p>
 <form class="signup" action="/signup" method="POST">
   Username: <input type="text" name="user[username]"><br>
   Password: <input type="password" name="user[password]"><br>
@@ -11,15 +14,16 @@
   <input type="submit" value="Welcome to Excusable!!">
 </form>
 </div>
-
-
-<br>
-<br>
-
-<div>
+    </td>
+    <td>
+<div id="log">
+  <p id="login">Login here</p>
 <form class="login" action="/login" method="POST">
   Username: <input type="text" name="user[username]"><br>
   Password: <input type="password" name="user[password]"><br>
   <input type="submit" value="Login">
 </form>
 </div>
+    </td>
+  </tr>
+</table>
