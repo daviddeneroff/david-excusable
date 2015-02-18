@@ -32,7 +32,7 @@ $(document).ready(function() {
       url: "/ajax/comment/excuse/" + rightID,
       success: function(success) {
         curseChecker.look("booger");
-        $('.all-comments').prepend("<p>"+ success.comment.content + " by: " + success.name + "</p>");
+        var hi = $('.all-comments').prepend("<p class='hey'>"+ success.comment.content + " by: " + success.name + "</p>");
         $(".hello").val(" ");
       }
     });

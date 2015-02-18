@@ -20,7 +20,7 @@ Votes: <%= @excuse.votes.count %><br>
     <% @excuse.comments.each do |comment| %>
       <p class="single-btn"><%= comment.content %> by: <%= comment.user.username %></p>
        <% if current_user.id == comment.user_id %>
-        <form class="single-btn" action="/excuses/<%= @excuse.id %>/delete" method="POST">
+        <form class="single-btn" action="/comments/<%= comment.id %>/delete" method="POST">
           <input type="hidden" name="_method" value="delete">
           <input type="submit" value="Delete Excuse">
         </form>
