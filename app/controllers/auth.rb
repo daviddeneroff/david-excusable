@@ -19,3 +19,8 @@ post '/signup' do
   User.create(params[:user])
   redirect '/login'
 end
+
+get '/logout' do
+  session.clear
+  redirect '/login'
+end
