@@ -1,3 +1,4 @@
 get '/excuses' do
-  erb
+  @excuses = Excuse.all
+  erb :'excuses/all'
 end

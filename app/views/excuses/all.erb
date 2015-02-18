@@ -1,0 +1,4 @@
+<% @excuses.each do |excuse|%>
+  Votes: <%= excuse.votes.count %><%= excuse.title %> | <%= excuse.user.username %><br>
+  <%= excuse.content %><br>
+<% end %>
