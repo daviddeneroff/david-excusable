@@ -1,3 +1,5 @@
+<h2>Check out your cohortmate's excuses below...</h2>
+
 <% @excuses.each do |excuse|%>
   <%= excuse.title %> | <%= excuse.user.username %>__Votes: <%= excuse.votes.count %><br>
   <%= excuse.content %><br>
@@ -9,6 +11,15 @@
     </form>
 
   <% end %>
+  <h3>Comments</h3>
+  <h5>Have something to say? Type it below</h5>
+    <div>
+      <form action="/comment/<%= excuse.id %>/create" method="POST">
+        Content: <br>
+        <textarea name="comment[content]" cols="30" rows="3"></textarea><br>
+        <input type="submit" value="Make Comment">
+      </form>
+    </div>
   <% excuse.comments.each do |comment| %>
     <%= comment.user.username %> says:<%= comment.content %><br>
     <% if current_user.id == comment.user_id %>
