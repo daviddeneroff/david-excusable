@@ -120,7 +120,7 @@ table.home-page {
     display:block;
 }
 
-#excuses-header {
+.excuses-header {
     text-align:center;
 }
 
@@ -128,8 +128,18 @@ table.home-page {
     text-align:center;
 }
 
+.ajax_comment {
+    text-align: center;
+}
+
 .fix-excuses {
-     margin:auto;
+    margin:auto;
+    text-align:center;
+    display:block;
+}
+
+.new-excuse {
+    margin:auto;
     text-align:center;
     display:block;
 }

@@ -2,7 +2,7 @@
 <br>
 <br>
 
-<h2 id="excuses-header">Check out your cohortmate's excuses below...</h2>
+<h2 class="excuses-header">Check out your cohortmate's excuses below...</h2>
 
 <% @excuses.each do |excuse|%>
   <a class="main-excuses" href="/excuses/<%=excuse.id%>"><%= excuse.title %> | <%= excuse.user.username %></a>

@@ -5,8 +5,8 @@ Votes: <%= @excuse.votes.count %><br>
 <%= @excuse.title %><br>
 <%= @excuse.content %><br>
 
-<h3>Comments</h3>
-  <h5>Have something to say? Type it below</h5>
+<h3 class="single-btn">Comments</h3>
+  <h5 class="single-btn">Have something to say? Type it below</h5>
     <div>
       <form class="ajax_comment" action="/comment/<%= @excuse.id %>/create" method="POST">
         Content: <br>
@@ -18,6 +18,13 @@ Votes: <%= @excuse.votes.count %><br>
 
   <div class="all-comments">
     <% @excuse.comments.each do |comment| %>
-      <p><%= comment.content %> by: <%= comment.user.username %></p>
+      <p class="single-btn"><%= comment.content %> by: <%= comment.user.username %></p>
+       <% if current_user.id == comment.user_id %>
+        <form class="single-btn" action="/excuses/<%= @excuse.id %>/delete" method="POST">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete Excuse">
+        </form>
+  <% end %>
     <% end %>
+
   </div>

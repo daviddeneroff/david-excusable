@@ -1,6 +1,6 @@
 <h1>Welcome back <%= @user.username %></h1>
 
-<h3>Here are all of your excuses. Check out the comments and votes to see what people think!!</h3>
+<h3 class="excuses-header">Here are all of your excuses. Check out the comments and votes to see what people think!!</h3>
 <% @user.excuses.each do |excuse| %>
 Votes: <%= excuse.votes.count %><br>
   <%= excuse.title %><br>
