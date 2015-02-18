@@ -9,6 +9,7 @@ end
 post '/login' do
   if @user = User.find_by(username: params[:user][:username]).try(:authenticate, params[:user][:password])
     session[:user_id] = @user.id
+    p session[:user_id]
     redirect "/excuses"
   else
     redirect '/login'
