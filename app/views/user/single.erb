@@ -6,6 +6,6 @@ Votes: <%= excuse.votes.count %><br>
   <%= excuse.title %><br>
   <%= excuse.content %><br>
   <% excuse.comments.each do |comment| %>
-    <%= comment.content %> by: <%= comment.user.username %>
+    <%= comment.content %> by: <%= comment.user.username %><br>
   <% end %>
 <% end %>
