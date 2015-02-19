@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+  $("#clickme").click(function(event) {
+  event.preventDefault
+  var x = confirm("Are you sure you want to log out?")
+    if (x == true) {
+      window.location = "/logout";
+    } else {
+      window.location = "/excuses";
+    }
+
+  });
+
   $('#signup').click(function() {
     $('.signup').toggle();
   });
