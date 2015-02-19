@@ -1,4 +1,8 @@
+
 Votes: <%= @excuse.votes.count %><br>
+<div class="verboden">
+  <p>Hey, you can't say that here!!</p>
+</div>
 
 <a class="excuse" href="#">Vote</a> | Count:<span class="vote_count"><%=@excuse.votes.count%></span><br>
 <input class="find-excuse" value="<%=@excuse.id%>" type="hidden">

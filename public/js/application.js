@@ -34,17 +34,20 @@ $(document).ready(function() {
   $(".ajax_comment").submit(function(event) {
     event.preventDefault();
     var rightID = $(".find-id").val();
+    if(curseChecker.look($(".hello").val()) == false){
     $.ajax({
       type: "post",
       dataType: "json",
       data: $(this).serialize(),
       url: "/ajax/comment/excuse/" + rightID,
       success: function(success) {
-        curseChecker.look("booger");
         var hi = $('.all-comments').prepend("<p class='hey'>"+ success.comment.content + " by: " + success.name + "</p>");
         $(".hello").val(" ");
+        $('.verboden').toggle(false);
       }
     });
+  } else {$('.verboden').toggle(true);
+$(".hello").val(" ");}
   });
 
 });
