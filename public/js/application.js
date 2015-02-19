@@ -5,8 +5,6 @@ $(document).ready(function() {
   var x = confirm("Are you sure you want to log out?")
     if (x == true) {
       window.location = "/logout";
-    } else {
-      window.location = "/excuses";
     }
 
   });
